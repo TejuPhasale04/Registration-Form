@@ -1,0 +1,339 @@
+<html>
+<head>
+	<title>Student Registration Form</title>
+<style>
+    body {
+        background-color: #f7f7f7;
+        font-family: Arial, sans-serif;
+      }
+      
+      h2 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #007BFF;
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 20px;
+      }
+      
+      table {
+        font-family: Arial, sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #007BFF;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        margin: 0 auto;
+      }
+      
+      table td {
+        padding: 10px 20px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      input[type="submit"],
+      input[type="reset"] {
+        width: 30%;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: #007BFF; /* Use the same color as the table background */
+        color: #fff;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #0056b3;
+      }
+      
+      @media screen and (max-width: 768px) {
+        table {
+          width: 100%;
+        }
+      
+        input[type="submit"],
+        input[type="reset"] {
+          width: 100%;
+        }
+      }
+      
+</style>
+</head>
+<body>
+		 <h2>Student Technical Event Registration Form</h2> 
+        <!---------------------------Form ------------------------------------------>
+<form name="entry" action="Form.php" method="POST">
+
+<table align="center" cellpadding = "10">
+<!--------------------- First Name ------------------------------------------>
+<tr>
+<td>First Name</td>
+<td><input type="text" id="fname" name="FirstName" maxlength="50" placeholder="abc" />
+</td>
+</tr>
+<!------------------------ Last Name --------------------------------------->
+<tr>
+<td>Last Name</td>
+<td><input type="text" name="LastName" maxlength="50" placeholder="xyz"/>
+</td>
+</tr>
+<!-------------------------- Email ID ------------------------------------->
+<tr>
+<td>Email ID</td>
+<td><input type="email" name="EmailID" id="email" maxlength="100" placeholder="GpAwsari@gmail.com" onfocus="createcookies()"/></td>
+</tr>
+<!-------------------------- Password ------------------------------------->
+<tr>
+<td>Password</td>
+<td><input type="text" name="pwd" maxlength="100" placeholder="GPA123" /></td>
+</tr>
+<!-------------------------- Mobile Number ------------------------------------->
+<tr>
+<td>Mobile Number</td>
+<td>
+<input type="text" name="MobileNumber" maxlength="10" placeholder="7842xxxxxx"/>
+</td>
+</tr>
+<!---------------------- Gender ------------------------------------->
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="Gender" value="Male" />
+Male
+<input type="radio" name="Gender" value="Female" />
+Female
+</td>
+</tr>
+<!--------------------------Date Of Birth----------------------------------->
+<tr>
+<td>Date of Birth(DOB)</td>
+<td>
+<select name="BirthDay" id="Birthday_Day">
+<option value=" ">Day:</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select name="BirthdayMonth" id="Birthday_Month">
+<option value=" ">Month:</option>
+<option value="January">Jan(1)</option>
+<option value="February">Feb(2)</option>
+<option value="March">Mar(3)</option>
+<option value="April">Apr(4)</option>
+<option value="May">May(5)</option>
+<option value="June">Jun(6)</option>
+<option value="July">Jul(7)</option>
+<option value="August">Aug(8)</option>
+<option value="September">Sep(9)</option>
+<option value="October">Oct(10)</option>
+<option value="November">Nov(11)</option>
+<option value="December">Dec(12)</option>
+</select>
+<select name="BirthdayYear" id="Birthday_Year">
+<option value=" ">Year:</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+</select>
+</td>
+</tr>
+<!------------------------- Address ---------------------------------->
+<tr>
+<td>Address<br /><br /><br /></td>
+<td><textarea name="Address" rows="10" cols="50"></textarea></td>
+</tr>
+<!-------------------------- City ------------------------------------->
+<tr>
+<td>City</td>
+<td><input type="text" name="City" maxlength="50" placeholder="Pune"/>
+</td>
+</tr>
+<!----- -------------------- Pin Code-------------------------------------->
+<tr>
+<td>Pin Code</td>
+<td><input type="Number" name="PinCode" maxlength="6" placeholder="414205"/>
+</td>
+</tr>
+<!---------------------------- State ----------------------------------->
+<tr>
+<td>State</td>
+<td><input type="text" name="State" maxlength="50" placeholder="Maharastra"/>
+</td>
+</tr>
+<!------------------------------ Country --------------------------------->
+<tr>
+<td>Country</td>
+<td><input type="text" name="Country" placeholder="India" /></td>
+</tr>
+<!---------------------------- Courses ----------------------------------->
+<tr>
+    <td>Courses</td>
+    <td>
+        <select name="branch">
+		<option value="">----Select a Course----</option>
+            <option value="op1">Information Technology</option>
+            <option value="op2">Computer Science</option>
+            <option value="op3">Electrical Engineering</option>
+            <option value="op4">Civil Engineering</option>
+            <option value="op5">Mechanical Engineering</option>
+            <option value="op6">Electronic Engineering</option>
+        </select><br><br>
+    </td>
+    </tr>
+    <!---------------------------- Semester----------------------------------->
+<tr>
+    <td>Semester:</td>
+    <td>
+        <select name="Semester">
+             <option value="">----Select Semester----</option>
+			<option value="op1">1st Semester</option>
+            <option value="op2">2nd Semester</option>
+            <option value="op3">3rd Semeester</option>
+            <option value="op4">4th Semester</option>
+            <option value="op5">5th Semester</option>
+            <option value="op6">6th Semester</option>
+        </select><br><br>
+    </td>
+    </tr>
+    <!---------------------------- Courses ----------------------------------->
+<tr>
+    <td>Enrollment Number:</td>
+    <td>
+       <input type="Number" name="t1" id="t1">
+    </td>
+    </tr>
+<!-----------------------Event---------------------------------------->
+<tr>
+<td>Events:<br /><br /><br /></td>
+<td>
+<br/>
+<input type="checkbox" name="Paper Presentation" id="ch1" value="Paper Presentation" />
+Paper Presentation<br>
+<input type="checkbox" name="Web Design" id="ch2" value="Web Design" />
+Web Design<br/>
+<input type="checkbox" name="Code Cracking" id="ch3" value="Code Cracking" />
+Code Cracking<br/>
+<input type="checkbox" name="Code King" id="ch4" value="Code King" />
+Code King<br/>
+<input type="checkbox" name="Poster Design" id="ch5" value="Poster Design">
+Poster Design<br>
+<input type="checkbox" name="Code Debugging" id="ch6" value="Code Debugging">
+Code Debugging<br>
+<input type="checkbox" name="Technical Quiz" id="ch7" value="Technical Quiz">
+Technical Quiz<br>
+<input type="checkbox" name="Phd" id="ch8" value="Brain Tester">
+Brain Tester<br>
+</td>
+</tr>
+<!----------------------- Submit and Reset ------------------------------->
+<tr>
+<td colspan="2" align="center">
+
+<input type="submit" value="Submit" name="btn1" onclick="Formsubmit()">
+<input type="reset" value="Reset" name="btn2">  
+
+<!--<img src="s1.jfif" height="100" width="150" onclick="javascript:document.forms.entry.submit()">
+<img src="r.jfif" height="100" width="150" onclick="javascript:document.forms.entry.reset()">
+--->
+</td>
+</tr>
+</table>
+</form>
+<script language="javascript" type="text/javascript">
+    var i;
+    function Formsubmit()
+    {
+		var j=document.getElementById("fname").value;
+		var ch1= document.getElementById("ch1");
+		var ch2= document.getElementById("ch2");
+		var ch3= document.getElementById("ch3");
+		var ch4= document.getElementById("ch4");
+		var ch5= document.getElementById("ch5");
+		var ch6= document.getElementById("ch6");
+		var ch7= document.getElementById("ch7");
+		var ch8= document.getElementById("ch8");
+		var res=" ";
+		var c1,c2,c3,c4,c5,c6,c7,c8;
+		if(ch1.checked == true){   c1 = document.getElementById("ch1").value;res = c1+",";}
+		if(ch2.checked == true){   c2= document.getElementById("ch2").value;res=res+c2+",";}
+		if(ch3.checked == true){   c3= document.getElementById("ch3").value;res=res+c3+",";}
+		if(ch4.checked == true){   c4= document.getElementById("ch4").value;res=res+c4+",";}
+		if(ch5.checked == true){   c5= document.getElementById("ch5").value;res=res+c5+",";}
+		if(ch6.checked == true){   c6= document.getElementById("ch6").value;res=res+c6+",";}
+		if(ch7.checked == true){   c7= document.getElementById("ch7").value;res=res+c7+",";}
+		if(ch8.checked == true){   c8= document.getElementById("ch8").value;res=res+c8+",";}
+		
+        alert("Thank you "+j+" For Register to "+res);
+   
+   }
+  
+</script>
+</body>
+</html>
